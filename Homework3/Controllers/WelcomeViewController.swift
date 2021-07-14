@@ -1,18 +1,16 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
     @IBOutlet weak var welcomeLabel: UILabel!
-
-    let defaultName = "Stranger"
+    @IBOutlet weak var exitButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        exitButton.layer.cornerRadius = 5
     }
 
     func welcomeUser(_ userName: String) {
-        let welcomeName = userName.isEmpty ? defaultName : userName
-
-        welcomeLabel.text = "Welcome, \(welcomeName)!"
+        welcomeLabel.text = "Welcome, \(userName) 👋"
     }
 }

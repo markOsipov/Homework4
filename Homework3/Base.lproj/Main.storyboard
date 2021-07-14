@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="5pE-0V-e8l">
-                                <rect key="frame" x="50" y="364" width="328" height="99"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="5pE-0V-e8l" userLabel="AuthStackView">
+                                <rect key="frame" x="50" y="334" width="328" height="99"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-fT-UkG" userLabel="LoginTextFiield">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="65" width="328" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="jjA-hR-QjP"/>
                                         </connections>
@@ -39,7 +39,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOa-Zn-t3H" userLabel="LoginButton">
-                                <rect key="frame" x="164" y="493" width="100" height="42"/>
+                                <rect key="frame" x="164" y="463" width="100" height="42"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="jhN-zh-05f"/>
@@ -50,17 +50,46 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qnD-kH-RBY" kind="show" id="dc6-n4-UJT"/>
+                                    <segue destination="qnD-kH-RBY" kind="show" identifier="goToWelcomeView" id="dc6-n4-UJT"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NOx-z6-zEA" userLabel="ScleroticStackView">
+                                <rect key="frame" x="50" y="525" width="328" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRQ-VA-UVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Forgot login?"/>
+                                        <connections>
+                                            <action selector="remindLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6G-gr-8IE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49Y-Rh-rFt">
+                                        <rect key="frame" x="192" y="0.0" width="136" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="remindPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zWU-13-JmU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hRQ-VA-UVA" firstAttribute="leading" secondItem="NOx-z6-zEA" secondAttribute="leading" id="8eX-71-at4"/>
+                                    <constraint firstAttribute="trailing" secondItem="49Y-Rh-rFt" secondAttribute="trailing" id="qdq-O7-doK"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HOa-Zn-t3H" firstAttribute="top" secondItem="5pE-0V-e8l" secondAttribute="bottom" constant="30" id="8jJ-Sj-b2b"/>
                             <constraint firstItem="5pE-0V-e8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="LW1-CW-lLp"/>
+                            <constraint firstItem="NOx-z6-zEA" firstAttribute="leading" secondItem="5pE-0V-e8l" secondAttribute="leading" id="Ntr-7B-4wE"/>
+                            <constraint firstItem="NOx-z6-zEA" firstAttribute="trailing" secondItem="5pE-0V-e8l" secondAttribute="trailing" id="T5I-n0-fN9"/>
+                            <constraint firstItem="NOx-z6-zEA" firstAttribute="top" secondItem="HOa-Zn-t3H" secondAttribute="bottom" constant="20" id="Ua9-Wz-vZj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5pE-0V-e8l" secondAttribute="trailing" constant="50" id="WN5-mb-tlT"/>
-                            <constraint firstItem="5pE-0V-e8l" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XR9-XU-yem"/>
+                            <constraint firstItem="5pE-0V-e8l" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="XR9-XU-yem"/>
+                            <constraint firstItem="NOx-z6-zEA" firstAttribute="width" secondItem="5pE-0V-e8l" secondAttribute="width" id="iuj-iA-kSK"/>
                             <constraint firstItem="HOa-Zn-t3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kuN-wU-sJw"/>
                         </constraints>
                     </view>
@@ -115,6 +144,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hsO-Ue-ecl"/>
                     <connections>
+                        <outlet property="exitButton" destination="oFc-4w-WXz" id="EDc-nA-CJO"/>
                         <outlet property="welcomeLabel" destination="E2T-gJ-U88" id="2OI-0I-QE8"/>
                     </connections>
                 </viewController>

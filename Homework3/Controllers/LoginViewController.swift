@@ -6,8 +6,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
 
+    let defaultLogin = "User"
+    let defaultPassword = "Kitties"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loginButton.layer.cornerRadius = 5
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -19,11 +24,8 @@ class LoginViewController: UIViewController {
             segue.perform()
             welcomeVC.welcomeUser(loginTextField.text!)
         } else {
-            let alert = UIAlertController(title: "Authentication error",
-                                          message: "Login or password are incorrect", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
-
+            showAlert(title: "Authentication error",
+                      message: "Login or password is incorrect")
         }
 
     }
@@ -35,17 +37,41 @@ class LoginViewController: UIViewController {
         passwordTextField.endEditing(true)
     }
 
-    func authenticate(login: String?, password: String?) -> Bool {
-        guard let password: String = password else {
-            return false
-        }
-        return !password.isEmpty
-    }
-
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
         loginTextField.text = ""
         passwordTextField.text = ""
     }
 
+    @IBAction func remindLogin(_ sender: Any) {
+        showAlert(title: "Don't panic!", message: "\n\nYour login is \(defaultLogin)")
+    }
+
+    @IBAction func remindPassword(_ sender: Any) {
+        showAlert(title: "Don't panic!", message: "\n\nYour password is \(defaultPassword)")
+    }
+
+    func authenticate(login: String?, password: String?) -> Bool {
+        return login == defaultLogin && password == defaultPassword
+    }
+
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+
 }
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if loginTextField.isEditing {
+            passwordTextField.becomeFirstResponder()
+
+        } else if passwordTextField.isEditing {
+            performSegue(withIdentifier: "goToWelcomeView", sender: self)
+        }
+
+        return true
+    }
+}
