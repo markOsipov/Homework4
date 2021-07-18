@@ -6,8 +6,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
 
-    let defaultLogin = "User"
-    let defaultPassword = "Kitties"
+    private let defaultLogin = "User"
+    private let defaultPassword = "Kitties"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,22 +19,23 @@ class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {
             return
         }
+        segue.perform()
+        welcomeVC.welcomeUser(loginTextField.text!)
+    }
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
         if authenticate(login: loginTextField.text, password: passwordTextField.text) {
-            segue.perform()
-            welcomeVC.welcomeUser(loginTextField.text!)
+            performSegue(withIdentifier: "goToWelcomeView", sender: self)
         } else {
             showAlert(title: "Authentication error",
                       message: "Login or password is incorrect")
         }
-
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
 
-        loginTextField.endEditing(true)
-        passwordTextField.endEditing(true)
+        view.endEditing(true)
     }
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
@@ -50,8 +51,8 @@ class LoginViewController: UIViewController {
         showAlert(title: "Don't panic!", message: "\n\nYour password is \(defaultPassword)")
     }
 
-    func authenticate(login: String?, password: String?) -> Bool {
-        return login == defaultLogin && password == defaultPassword
+    private func authenticate(login: String?, password: String?) -> Bool {
+        login == defaultLogin && password == defaultPassword
     }
 
     func showAlert(title: String, message: String) {
