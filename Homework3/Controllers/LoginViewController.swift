@@ -6,9 +6,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
 
-    private let defaultLogin = "User"
-    private let defaultPassword = "Kitties"
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,20 +13,20 @@ class LoginViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
-        }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.user = users.first{ $0.login == loginTextField.text }
         segue.perform()
-        welcomeVC.welcomeUser(loginTextField.text!)
+
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        if authenticate(login: loginTextField.text, password: passwordTextField.text) {
-            performSegue(withIdentifier: "goToWelcomeView", sender: self)
-        } else {
+        if !authenticate(login: loginTextField.text!, password: passwordTextField.text!) {
             showAlert(title: "Authentication error",
                       message: "Login or password is incorrect")
+            return
         }
+
+        performSegue(withIdentifier: "goToWelcomeView", sender: self)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,15 +41,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func remindLogin(_ sender: Any) {
-        showAlert(title: "Don't panic!", message: "\n\nYour login is \(defaultLogin)")
+        showAlert(title: "Don't panic!", message: "\n\nYour login is \(guestUser.login)")
     }
 
     @IBAction func remindPassword(_ sender: Any) {
-        showAlert(title: "Don't panic!", message: "\n\nYour password is \(defaultPassword)")
+        showAlert(title: "Don't panic!", message: "\n\nYour password is \(guestUser.password)")
     }
 
-    private func authenticate(login: String?, password: String?) -> Bool {
-        login == defaultLogin && password == defaultPassword
+    private func authenticate(login: String, password: String) -> Bool {
+        users.contains{
+            $0.login == login && $0.password == password
+        }
     }
 
     func showAlert(title: String, message: String) {

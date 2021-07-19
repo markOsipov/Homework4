@@ -14,6 +14,7 @@
 		6BA5975A269F7EDD0008DB5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA59759269F7EDD0008DB5F /* Assets.xcassets */; };
 		6BA5975D269F7EDD0008DB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5975B269F7EDD0008DB5F /* LaunchScreen.storyboard */; };
 		6BA59767269F876B0008DB5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA59766269F876B0008DB5F /* WelcomeViewController.swift */; };
+		6BA5978F26A4EA4E0008DB5F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5978E26A4EA4E0008DB5F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6BA5975C269F7EDD0008DB5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA5975E269F7EDD0008DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA59766269F876B0008DB5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6BA5978E26A4EA4E0008DB5F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		6BA5974F269F7EDC0008DB5F /* Homework3 */ = {
 			isa = PBXGroup;
 			children = (
+				6BA5978D26A4EA3C0008DB5F /* Models */,
 				6BA59768269F87700008DB5F /* Controllers */,
 				6BA59750269F7EDC0008DB5F /* AppDelegate.swift */,
 				6BA59752269F7EDC0008DB5F /* SceneDelegate.swift */,
@@ -76,6 +79,14 @@
 				6BA59766269F876B0008DB5F /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6BA5978D26A4EA3C0008DB5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BA5978E26A4EA4E0008DB5F /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				6BA59755269F7EDC0008DB5F /* LoginViewController.swift in Sources */,
 				6BA59767269F876B0008DB5F /* WelcomeViewController.swift in Sources */,
 				6BA59751269F7EDC0008DB5F /* AppDelegate.swift in Sources */,
+				6BA5978F26A4EA4E0008DB5F /* User.swift in Sources */,
 				6BA59753269F7EDC0008DB5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
