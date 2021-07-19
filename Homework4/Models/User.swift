@@ -1,35 +1,17 @@
 import Foundation
 
 struct User {
-    //Security data
-    let id: Int64
-    let login: String
-    var password: String
-
-    //Primary info
-    var firstName: String
-    var secondName: String
-    var birthDate: String
-
-    var country: String
-    var city: String
-    var address: String
-
-    //Job info
-    var placeOfWork: String
-    var position: String
-    var hireDate: String
-
-    //Personal info
-    var bio: String
-    var hobbies: String
+    var securityInfo: UserSecurityInfo
+    var primaryInfo: UserPrimaryInfo
+    var jobInfo: UserJobInfo
+    var personalInfo: UserPersonalInfo
 
     init(id: Int64 = Int64(Date().timeIntervalSince1970),
          login: String,
          password: String,
 
          firstName: String = "",
-         secondName: String  = "",
+         lastName: String  = "",
          birthDate: String  = "",
 
          country: String  = "",
@@ -43,24 +25,29 @@ struct User {
          bio: String  = "",
          hobbies: String  = ""
     ) {
-        self.id = id
-        self.login = login
-        self.password = password
+        self.securityInfo = UserSecurityInfo(
+            login: login,
+            password: password
+        )
+        self.primaryInfo = UserPrimaryInfo(
+            firstName: firstName,
+            lastName: lastName,
+            birthDate: birthDate,
 
-        self.firstName = firstName
-        self.secondName = secondName
-        self.birthDate = birthDate
+            country: country,
+            city: city,
+            address: address
+        )
+        self.jobInfo = UserJobInfo(
+            placeOfWork: placeOfWork,
+            position: position,
+            hireDate: hireDate
+        )
 
-        self.country = country
-        self.city = city
-        self.address = address
-
-        self.placeOfWork = placeOfWork
-        self.position = position
-        self.hireDate = hireDate
-
-        self.bio = bio
-        self.hobbies = hobbies
+        self.personalInfo = UserPersonalInfo(
+            bio: bio,
+            hobbies: hobbies
+        )
     }
 }
 
@@ -70,7 +57,7 @@ let guestUser = User(
     password: "guest",
 
     firstName: "Василий",
-    secondName: "Пупкин",
+    lastName: "Пупкин",
     birthDate: "07/12/1980",
 
     country: "Нарния",
@@ -85,6 +72,7 @@ let guestUser = User(
     hobbies: "Мемы, котики"
 )
 
+//задел на будущее, если нужно будет регистрировать новых.
 var users: [User] = [
     guestUser
 ]

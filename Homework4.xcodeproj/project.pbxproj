@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B31ED4426A51EF400994036 /* SecurityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED4326A51EF400994036 /* SecurityInfoViewController.swift */; };
+		6B31ED4626A51EFB00994036 /* PrimaryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED4526A51EFB00994036 /* PrimaryInfoViewController.swift */; };
+		6B31ED4826A51EFD00994036 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED4726A51EFD00994036 /* PersonalInfoViewController.swift */; };
+		6B31ED4A26A51EFE00994036 /* JobInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED4926A51EFE00994036 /* JobInfoViewController.swift */; };
+		6B31ED4C26A51FCC00994036 /* UserTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED4B26A51FCC00994036 /* UserTabBarController.swift */; };
+		6B31ED5226A52A6300994036 /* UserSecurityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED5126A52A6300994036 /* UserSecurityInfo.swift */; };
+		6B31ED5426A52A7B00994036 /* UserPrimaryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED5326A52A7B00994036 /* UserPrimaryInfo.swift */; };
+		6B31ED5626A52A9700994036 /* UserJobInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED5526A52A9700994036 /* UserJobInfo.swift */; };
+		6B31ED5826A52AAD00994036 /* UserPersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31ED5726A52AAD00994036 /* UserPersonalInfo.swift */; };
 		6BA59751269F7EDC0008DB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA59750269F7EDC0008DB5F /* AppDelegate.swift */; };
 		6BA59753269F7EDC0008DB5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA59752269F7EDC0008DB5F /* SceneDelegate.swift */; };
 		6BA59755269F7EDC0008DB5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA59754269F7EDC0008DB5F /* LoginViewController.swift */; };
 		6BA59758269F7EDC0008DB5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA59756269F7EDC0008DB5F /* Main.storyboard */; };
 		6BA5975A269F7EDD0008DB5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA59759269F7EDD0008DB5F /* Assets.xcassets */; };
 		6BA5975D269F7EDD0008DB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5975B269F7EDD0008DB5F /* LaunchScreen.storyboard */; };
-		6BA59767269F876B0008DB5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA59766269F876B0008DB5F /* WelcomeViewController.swift */; };
 		6BA5978F26A4EA4E0008DB5F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5978E26A4EA4E0008DB5F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6BA5974D269F7EDC0008DB5F /* Homework3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B31ED4326A51EF400994036 /* SecurityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityInfoViewController.swift; sourceTree = "<group>"; };
+		6B31ED4526A51EFB00994036 /* PrimaryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoViewController.swift; sourceTree = "<group>"; };
+		6B31ED4726A51EFD00994036 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		6B31ED4926A51EFE00994036 /* JobInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobInfoViewController.swift; sourceTree = "<group>"; };
+		6B31ED4B26A51FCC00994036 /* UserTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabBarController.swift; sourceTree = "<group>"; };
+		6B31ED5126A52A6300994036 /* UserSecurityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSecurityInfo.swift; sourceTree = "<group>"; };
+		6B31ED5326A52A7B00994036 /* UserPrimaryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrimaryInfo.swift; sourceTree = "<group>"; };
+		6B31ED5526A52A9700994036 /* UserJobInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJobInfo.swift; sourceTree = "<group>"; };
+		6B31ED5726A52AAD00994036 /* UserPersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPersonalInfo.swift; sourceTree = "<group>"; };
+		6BA5974D269F7EDC0008DB5F /* Homework4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA59750269F7EDC0008DB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BA59752269F7EDC0008DB5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6BA59754269F7EDC0008DB5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +43,6 @@
 		6BA59759269F7EDD0008DB5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BA5975C269F7EDD0008DB5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA5975E269F7EDD0008DB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BA59766269F876B0008DB5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6BA5978E26A4EA4E0008DB5F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,10 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B31ED4226A51ECB00994036 /* TabsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B31ED4526A51EFB00994036 /* PrimaryInfoViewController.swift */,
+				6B31ED4926A51EFE00994036 /* JobInfoViewController.swift */,
+				6B31ED4726A51EFD00994036 /* PersonalInfoViewController.swift */,
+				6B31ED4326A51EF400994036 /* SecurityInfoViewController.swift */,
+			);
+			path = TabsControllers;
+			sourceTree = "<group>";
+		};
 		6BA59744269F7EDC0008DB5F = {
 			isa = PBXGroup;
 			children = (
-				6BA5974F269F7EDC0008DB5F /* Homework3 */,
+				6BA5974F269F7EDC0008DB5F /* Homework4 */,
 				6BA5974E269F7EDC0008DB5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +79,12 @@
 		6BA5974E269F7EDC0008DB5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BA5974D269F7EDC0008DB5F /* Homework3.app */,
+				6BA5974D269F7EDC0008DB5F /* Homework4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6BA5974F269F7EDC0008DB5F /* Homework3 */ = {
+		6BA5974F269F7EDC0008DB5F /* Homework4 */ = {
 			isa = PBXGroup;
 			children = (
 				6BA5978D26A4EA3C0008DB5F /* Models */,
@@ -69,14 +96,15 @@
 				6BA5975B269F7EDD0008DB5F /* LaunchScreen.storyboard */,
 				6BA5975E269F7EDD0008DB5F /* Info.plist */,
 			);
-			path = Homework3;
+			path = Homework4;
 			sourceTree = "<group>";
 		};
 		6BA59768269F87700008DB5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6B31ED4226A51ECB00994036 /* TabsControllers */,
 				6BA59754269F7EDC0008DB5F /* LoginViewController.swift */,
-				6BA59766269F876B0008DB5F /* WelcomeViewController.swift */,
+				6B31ED4B26A51FCC00994036 /* UserTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				6BA5978E26A4EA4E0008DB5F /* User.swift */,
+				6B31ED5126A52A6300994036 /* UserSecurityInfo.swift */,
+				6B31ED5326A52A7B00994036 /* UserPrimaryInfo.swift */,
+				6B31ED5526A52A9700994036 /* UserJobInfo.swift */,
+				6B31ED5726A52AAD00994036 /* UserPersonalInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BA5974C269F7EDC0008DB5F /* Homework3 */ = {
+		6BA5974C269F7EDC0008DB5F /* Homework4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BA59761269F7EDD0008DB5F /* Build configuration list for PBXNativeTarget "Homework3" */;
+			buildConfigurationList = 6BA59761269F7EDD0008DB5F /* Build configuration list for PBXNativeTarget "Homework4" */;
 			buildPhases = (
 				6BA59749269F7EDC0008DB5F /* Sources */,
 				6BA5974A269F7EDC0008DB5F /* Frameworks */,
@@ -104,9 +136,9 @@
 			);
 			dependencies = (
 			);
-			name = Homework3;
+			name = Homework4;
 			productName = Homework3;
-			productReference = 6BA5974D269F7EDC0008DB5F /* Homework3.app */;
+			productReference = 6BA5974D269F7EDC0008DB5F /* Homework4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6BA59748269F7EDC0008DB5F /* Build configuration list for PBXProject "Homework3" */;
+			buildConfigurationList = 6BA59748269F7EDC0008DB5F /* Build configuration list for PBXProject "Homework4" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BA5974C269F7EDC0008DB5F /* Homework3 */,
+				6BA5974C269F7EDC0008DB5F /* Homework4 */,
 			);
 		};
 /* End PBXProject section */
@@ -159,10 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B31ED5626A52A9700994036 /* UserJobInfo.swift in Sources */,
+				6B31ED4C26A51FCC00994036 /* UserTabBarController.swift in Sources */,
+				6B31ED5426A52A7B00994036 /* UserPrimaryInfo.swift in Sources */,
+				6B31ED4626A51EFB00994036 /* PrimaryInfoViewController.swift in Sources */,
 				6BA59755269F7EDC0008DB5F /* LoginViewController.swift in Sources */,
-				6BA59767269F876B0008DB5F /* WelcomeViewController.swift in Sources */,
+				6B31ED4426A51EF400994036 /* SecurityInfoViewController.swift in Sources */,
+				6B31ED5226A52A6300994036 /* UserSecurityInfo.swift in Sources */,
 				6BA59751269F7EDC0008DB5F /* AppDelegate.swift in Sources */,
+				6B31ED4826A51EFD00994036 /* PersonalInfoViewController.swift in Sources */,
+				6B31ED5826A52AAD00994036 /* UserPersonalInfo.swift in Sources */,
 				6BA5978F26A4EA4E0008DB5F /* User.swift in Sources */,
+				6B31ED4A26A51EFE00994036 /* JobInfoViewController.swift in Sources */,
 				6BA59753269F7EDC0008DB5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,12 +351,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Homework3/Info.plist;
+				INFOPLIST_FILE = Homework4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swiftbook.Homework3;
+				PRODUCT_BUNDLE_IDENTIFIER = swiftbook.Homework4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,12 +369,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Homework3/Info.plist;
+				INFOPLIST_FILE = Homework4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swiftbook.Homework3;
+				PRODUCT_BUNDLE_IDENTIFIER = swiftbook.Homework4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6BA59748269F7EDC0008DB5F /* Build configuration list for PBXProject "Homework3" */ = {
+		6BA59748269F7EDC0008DB5F /* Build configuration list for PBXProject "Homework4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BA5975F269F7EDD0008DB5F /* Debug */,
@@ -353,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BA59761269F7EDD0008DB5F /* Build configuration list for PBXNativeTarget "Homework3" */ = {
+		6BA59761269F7EDD0008DB5F /* Build configuration list for PBXNativeTarget "Homework4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BA59762269F7EDD0008DB5F /* Debug */,

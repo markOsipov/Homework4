@@ -13,8 +13,8 @@ class LoginViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = users.first{ $0.login == loginTextField.text }
+        guard let targetVC = segue.destination as? UserTabBarController else { return }
+        targetVC.user = users.first{ $0.securityInfo.login == loginTextField.text }
         segue.perform()
 
     }
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
             return
         }
 
-        performSegue(withIdentifier: "goToWelcomeView", sender: self)
+        performSegue(withIdentifier: "goToTabBarView", sender: self)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,16 +41,16 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func remindLogin(_ sender: Any) {
-        showAlert(title: "Don't panic!", message: "\n\nYour login is \(guestUser.login)")
+        showAlert(title: "Don't panic!", message: "\n\nYour login is \(guestUser.securityInfo.login)")
     }
 
     @IBAction func remindPassword(_ sender: Any) {
-        showAlert(title: "Don't panic!", message: "\n\nYour password is \(guestUser.password)")
+        showAlert(title: "Don't panic!", message: "\n\nYour password is \(guestUser.securityInfo.password)")
     }
 
     private func authenticate(login: String, password: String) -> Bool {
         users.contains{
-            $0.login == login && $0.password == password
+            $0.securityInfo.login == login && $0.securityInfo.password == password
         }
     }
 
@@ -69,7 +69,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
 
         } else if passwordTextField.isEditing {
-            performSegue(withIdentifier: "goToWelcomeView", sender: self)
+            performSegue(withIdentifier: "goToTabBarView", sender: self)
         }
 
         return true
